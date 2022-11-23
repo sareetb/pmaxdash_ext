@@ -1,5 +1,5 @@
 {
-    "name": "app-reporting-pack",
+    "name": "pmaxdash",
     "env": {
         "OAUTH_CLIENT_ID": {
             "description": "OAuth 2.0 Client ID",
