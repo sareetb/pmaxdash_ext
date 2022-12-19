@@ -46,11 +46,6 @@ def home():
                             Run Queries
                         </button>
                     </body>
-                    #<body>
-                    #    <button onclick="window.location.href='{dashboard_url}';">
-                    #        Create Dashboard
-                    #    </button>
-                    #</body>
                 </html>"""
 
 
