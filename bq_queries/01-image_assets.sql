@@ -1,5 +1,5 @@
-CREATE SCHEMA IF NOT EXISTS `{bq_project}.{bq_dataset}_bq`;
-CREATE OR REPLACE VIEW `{bq_project}.{bq_dataset}_bq.image_assets`
+CREATE SCHEMA IF NOT EXISTS `{bq_dataset}_bq`;
+CREATE OR REPLACE VIEW `{bq_dataset}_bq.image_assets`
 AS
 WITH count_image_assets AS (
   SELECT
@@ -9,7 +9,7 @@ WITH count_image_assets AS (
     asset_group_name,
     COUNT(*) AS count_images
   FROM
-    `{bq_project}.{bq_dataset}.assetgroupasset`
+    `{bq_dataset}.assetgroupasset`
   WHERE asset_type = 'IMAGE'
   GROUP BY 1, 2, 3, 4
 ),
@@ -21,7 +21,7 @@ count_logos AS (
     asset_group_name,
     COUNT(*) AS count_logos
   FROM
-    `{bq_project}.{bq_dataset}.assetgroupasset`
+    `{bq_dataset}.assetgroupasset`
   WHERE asset_sub_type = 'LOGO'
   GROUP BY 1, 2, 3, 4
 ),
@@ -36,8 +36,8 @@ map_assets_account_campaign AS (
     AGA.asset_group_name,
     A.image_width,
     A.image_height
-  FROM `{bq_project}.{bq_dataset}.assetgroupasset` as AGA
-  LEFT JOIN `{bq_project}.{bq_dataset}.asset` as A
+  FROM `{bq_dataset}.assetgroupasset` as AGA
+  LEFT JOIN `{bq_dataset}.asset` as A
     ON AGA.account_id = A.account_id
     AND AGA.asset_id = A.asset_id
 ),
