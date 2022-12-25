@@ -14,4 +14,4 @@ AS (
     conversion_action_id
   FROM convActionFreq
   WHERE row_num = 1
-);
+)

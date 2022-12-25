@@ -51,7 +51,7 @@ count_rectangular_assets AS (
   FROM
     map_assets_account_campaign
   WHERE image_width = 600
-    AND image_height = 300
+    AND image_height IN (300,314)
   GROUP BY 1, 2, 3, 4
 ),
 count_square_300 AS (
@@ -63,7 +63,7 @@ count_square_300 AS (
     COUNT(*) AS count_square
   FROM map_assets_account_campaign
   WHERE image_width = image_height
-    AND image_width = 300
+    AND image_width IN (300,314)
   GROUP BY 1, 2, 3, 4
 ),
 count_square_logos AS (
@@ -73,8 +73,8 @@ count_square_logos AS (
     AGA.asset_group_id,
     AGA.asset_group_name,
     COUNT(*) AS count_square_logos
-  FROM `{bq_project}.{bq_dataset}.asset` AS A
-  INNER JOIN `{bq_project}.{bq_dataset}.assetgroupasset` AS AGA
+  FROM `{bq_dataset}.asset` AS A
+  INNER JOIN `{bq_dataset}.assetgroupasset` AS AGA
     ON AGA.asset_id = A.asset_id
   WHERE A.image_width = A.image_height
     AND A.image_width = 128
@@ -99,15 +99,13 @@ SELECT
   AGS.campaign_name,
   AGS.asset_group_id,
   AGS.asset_group_name,
-  #Temporarily Disabled Field
-  #AGS.ad_strength,
   CIA.count_images,
   CL.count_logos,
   CRA.count_rectangular,
   CSN.count_square,
   CSL.count_square_logos,
   CRL.count_rectangular_logos
-FROM `{bq_project}.{bq_dataset}.assetgroupsummary` AS AGS
+FROM `{bq_dataset}.assetgroupsummary` AS AGS
 LEFT JOIN count_image_assets AS CIA
   ON CIA.campaign_id = AGS.campaign_id
   AND CIA.asset_group_id = AGS.asset_group_id

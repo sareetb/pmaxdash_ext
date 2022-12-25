@@ -16,4 +16,4 @@ AS (
     conversion_name
   FROM convActionFreq
   WHERE row_num = 1
-);
+)
