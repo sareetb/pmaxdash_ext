@@ -1,4 +1,4 @@
-CREATE OR REPLACE TABLE `{bq_project}.{bq_dataset}_bq.assetssnapshots_${format(yesterday(),'yyyyMMdd')}` AS
+CREATE OR REPLACE TABLE `{bq_dataset}_bq.assetssnapshots_${format(yesterday(),'yyyyMMdd')}` AS
 SELECT
   CURRENT_DATE()-1 as day,
   AGA.account_id,
