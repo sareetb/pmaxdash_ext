@@ -3,6 +3,7 @@ gaarf:
   bq:
     project: YOUR-BQ-PROJECT
     dataset: pmax_ads
+    location: YOUR-REGION
   # Do not change API version manually
   api_version: 12
   account: 'MCC-ID'
