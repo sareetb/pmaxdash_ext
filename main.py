@@ -38,9 +38,9 @@ def home():
     return f"""<!DOCTYPE html>
                 <html>
                     <head>
-                        <title>App Reporting Pack</title>
+                        <title>pMax Best Practices Dashboard</title>
                     </head>
-                    <p>Click on "Run Queries" to manually trigger the queries. </br>Click on "Create Dashboard" to create your private copy of App Reporting Pack dashboard.<p>
+                    <p>Click on "Run Queries" to manually trigger the queries. </br>Click on "Create Dashboard" to create your private copy of pMax Best Practices dashboard.<p>
                     <body>
                         <button onclick="window.location.href='run-queries';alert('Running Queries')">
                             Run Queries
@@ -51,7 +51,7 @@ def home():
 
 @app.route("/run-queries", methods=["POST", "GET"])
 def run_queries():
-    """Run the App Reporting Pack queries and save results to BQ."""
+    """Run the pMax Best Practices Dash queries and save results to BQ."""
     print("Request recieved. Running queries")
     try:
         subprocess.check_call(["./run-docker.sh", "google_ads_queries/*.sql", "bq_queries", "/google-ads.yaml"])
