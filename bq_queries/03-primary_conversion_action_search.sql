@@ -1,4 +1,4 @@
-CREATE OR REPLACE VIEW `{bq_dataset}_bq.primary_conversion_action_search`
+CREATE OR REPLACE TABLE `{bq_dataset}_bq.primary_conversion_action_search`
 AS (
   WITH convActionFreq AS (
      SELECT

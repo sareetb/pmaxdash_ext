@@ -1,4 +1,4 @@
-CREATE OR REPLACE VIEW `{bq_dataset}_bq.campaign_settings` AS
+CREATE OR REPLACE TABLE `{bq_dataset}_bq.campaign_settings` AS
 WITH targets AS (
     SELECT
       C.date,

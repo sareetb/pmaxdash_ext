@@ -1,4 +1,4 @@
-CREATE OR REPLACE VIEW `{bq_dataset}_bq.campaign_data`
+CREATE OR REPLACE TABLE `{bq_dataset}_bq.campaign_data`
 AS (
   WITH targets AS (
     SELECT

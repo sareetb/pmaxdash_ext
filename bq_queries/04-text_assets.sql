@@ -1,4 +1,4 @@
-CREATE OR REPLACE VIEW `{bq_dataset}_bq.text_assets`
+CREATE OR REPLACE TABLE `{bq_dataset}_bq.text_assets`
 AS
 WITH count_headlines AS (
   SELECT

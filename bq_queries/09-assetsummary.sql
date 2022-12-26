@@ -1,4 +1,4 @@
-CREATE OR REPLACE VIEW `{bq_dataset}_bq.summaryassets` AS
+CREATE OR REPLACE TABLE `{bq_dataset}_bq.summaryassets` AS
 SELECT
   AGA.account_id,
   AGA.account_name,

@@ -1,4 +1,4 @@
-CREATE OR REPLACE VIEW `{bq_dataset}_bq.campaign_scores_union` AS
+CREATE OR REPLACE TABLE `{bq_dataset}_bq.campaign_scores_union` AS
 WITH 
 score_types AS
 (

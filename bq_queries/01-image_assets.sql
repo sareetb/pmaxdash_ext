@@ -1,5 +1,5 @@
 CREATE SCHEMA IF NOT EXISTS `{bq_dataset}_bq`;
-CREATE OR REPLACE VIEW `{bq_dataset}_bq.image_assets`
+CREATE OR REPLACE TABLE `{bq_dataset}_bq.image_assets`
 AS
 WITH count_image_assets AS (
   SELECT
