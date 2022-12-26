@@ -13,6 +13,7 @@ gaarf:
       end_date: ":YYYYMMDD-1"
 gaarf-bq:
   project: YOUR-BQ-PROJECT
+  dataset_location: YOUR-REGION
   params:
     macro:
       bq_dataset: pmax_ads
