@@ -4,19 +4,20 @@ import yaml
 import urllib.parse
 from flask import Flask, request, redirect
 
-#_DATASOURCES_DICT = {
-#    "excellence": ("creative_excellence", "UAC Hygiene"),
-#    "perf_group": ("performance_grouping", "Performance Grouping Changes"),
-#    "network": ("ad_group_network_split", "Network Splits"),
-#    "assets": ("asset_performance", "Assets"),
-#    "approvals": ("approval_statuses", "Disapprovals"),
-#    "changes": ("change_history", "Final Change History")
-#}
+_DATASOURCES_DICT = {
+    "poor_assets": ("poor_assets_summary", "pMax Poor Assets Summary"),
+    "asset_group_bp": ("assetgroupbestpractices", "pMax Asset Group Best Practices"),
+    "campaign_setup": ("campaign_data", "pMax Campaign Setup"),
+    "campaign_settings": ("campaign_settings", "pMax Campaign Settings and Scores"),
+    "assets_performance": ("summary_assets", "pMax Assets Performance"),
+    "asset_performance_snapshots": ("assetsnapshots_YYYYMMDD", "pMax Asset Performance Snapshots"),
+    "scores": ("campaign_scores_union", "pMax Campaign Scores")
+}
 
-#_REPORT_ID = "187f1f41-16bc-434d-8437-7988bed6e8b9"
-#_REPORT_NAME = "New Report"
-#_DATASET_ID = "app_reporting_pack_target"
-#_BASE_URL = "https://datastudio.google.com/reporting/create?"
+_REPORT_ID = "6e773f65-7612-45af-af37-e3cab6a9828b"
+_REPORT_NAME = "pMax Best Practices Dashboard"
+_DATASET_ID = "pmax_ads_test_bq"
+_BASE_URL = "https://datastudio.google.com/reporting/create?"
 _CONFIG_FILE_PATH = "./config.yaml"
 
 
@@ -34,7 +35,7 @@ def home():
 
     project_id = bq_data.get('project')
 
-    #dashboard_url = create_url(_REPORT_NAME, _REPORT_ID, project_id, _DATASET_ID, _DATASOURCES_DICT)
+    dashboard_url = create_url(_REPORT_NAME, _REPORT_ID, project_id, _DATASET_ID, _DATASOURCES_DICT)
     return f"""<!DOCTYPE html>
                 <html>
                     <head>
@@ -44,6 +45,11 @@ def home():
                     <body>
                         <button onclick="window.location.href='run-queries';alert('Running Queries')">
                             Run Queries
+                        </button>
+                    </body>
+                    <body>
+                        <button onclick="window.location.href='{dashboard_url}';">
+                            Create Dashboard
                         </button>
                     </body>
                 </html>"""
