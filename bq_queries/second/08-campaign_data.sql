@@ -22,7 +22,6 @@ AS (
   ),
   search_targets AS (
     SELECT
-      TS.date,
       TS.account_id,
       TS.campaign_id,
       CASE 
