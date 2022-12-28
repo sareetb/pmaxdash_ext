@@ -1,6 +1,6 @@
 CREATE OR REPLACE TABLE `{bq_dataset}_bq.campaignbpscore_{date_iso}` AS
 SELECT
-  date,
+  CURRENT_DATE() AS date,
   account_id,
   account_name,
   campaign_id,
