@@ -8,3 +8,4 @@ gaarf-bq $bq_queries/first/*.sql -c=/config.yaml
 gaarf-bq $bq_queries/second/*.sql -c=/config.yaml
 gaarf-bq $bq_queries/third/*.sql -c=/config.yaml
 gaarf-bq $bq_queries/fourth/*.sql -c=/config.yaml
+gaarf-bq $bq_queries/fifth/*.sql -c=/config.yaml
