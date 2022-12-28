@@ -1,4 +1,4 @@
-CREATE OR REPLACE TABLE `{bq_dataset}_bq.assetgroupbpscore_${format(today(),'yyyyMMdd')}` AS
+CREATE OR REPLACE TABLE `{bq_dataset}_bq.assetgroupbpscore_{date_iso}` AS
 WITH video_data AS (
   SELECT
     account_id,

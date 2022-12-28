@@ -1,4 +1,4 @@
-CREATE OR REPLACE TABLE `{bq_dataset}_bq.campaignbpscore_${format(today(),'yyyyMMdd')}` AS
+CREATE OR REPLACE TABLE `{bq_dataset}_bq.campaignbpscore_{date_iso}` AS
 SELECT
   date,
   account_id,
