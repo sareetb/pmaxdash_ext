@@ -10,7 +10,7 @@ _DATASOURCES_DICT = {
     "campaign_setup": ("campaign_data", "pMax Campaign Setup"),
     "campaign_settings": ("campaign_settings", "pMax Campaign Settings and Scores"),
     "assets_performance": ("summaryassets", "pMax Assets Performance"),
-    "asset_performance_snapshots": ("assetsnapshots_YYYYMMDD", "pMax Asset Performance Snapshots"),
+    "asset_performance_snapshots": ("assetssnapshots_YYYYMMDD", "pMax Asset Performance Snapshots"),
     "scores": ("campaign_scores_union", "pMax Campaign Scores")
 }
 
