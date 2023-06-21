@@ -55,10 +55,11 @@ Click
 
 ## Add Sensitive Scopes to Consent Screen
 
-1.  Click
-    <walkthrough-spotlight-pointer locator="text('Add or remove scopes')">Add or remove scopes</walkthrough-spotlight-pointer>
-1. Now in <walkthrough-spotlight-pointer locator="text('Enter property name of value')">Enter property name or value</walkthrough-spotlight-pointer> search for the BigQuery API, check the box to choose it.
+1. Click <walkthrough-spotlight-pointer locator="semantic({button 'Add or remove scopes'})">Add or remove scopes</walkthrough-spotlight-pointer>
+1. Now in <walkthrough-spotlight-pointer locator="semantic({combobox 'Filter'})">Enter property name or value</walkthrough-spotlight-pointer> search for the BigQuery API, check the box to choose it.
 1. Do the same for Google Ads API.
+1. Click <walkthrough-spotlight-pointer locator="text('Update')">Update</walkthrough-spotlight-pointer>
+
 
 ## Enable Google Cloud APIs
 
