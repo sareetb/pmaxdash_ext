@@ -7,6 +7,13 @@ In this walkthrough, you'll generate OAuth credentials in preparation for the de
 <walkthrough-tutorial-difficulty difficulty="3"></walkthrough-tutorial-difficulty>
 <walkthrough-tutorial-duration duration="10"></walkthrough-tutorial-duration>
 
+
+## Switch Off Ephemeral Mode
+
+First, let's swith your shell from ephemeral mode.
+
+Click <walkthrough-spotlight-pointer locator="semantic({button 'more_vert'})">More Menu</walkthrough-spotlight-pointer>
+
 ## Project setup
 
 GCP organizes resources into projects. This allows you to
