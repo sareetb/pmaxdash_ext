@@ -12,7 +12,7 @@ In this walkthrough, you'll generate OAuth credentials in preparation for the de
 
 First, let's switch your shell from ephemeral mode.
 
-Click <walkthrough-spotlight-pointer locator="semantic({button 'More Cloud Shell Settings'})">More Menu</walkthrough-spotlight-pointer>
+Click <walkthrough-spotlight-pointer locator="semantic({button 'More Cloud Shell settings'})">More Menu</walkthrough-spotlight-pointer>
 
 ## Project setup
 
