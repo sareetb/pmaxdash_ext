@@ -1,4 +1,4 @@
-# Deploying The Dashboard
+# Generate Credentials to Access the Google Ads API
 
 ## Introduction
 
@@ -10,9 +10,9 @@ In this walkthrough, you'll generate OAuth credentials in preparation for the de
 
 ## Switch Off Ephemeral Mode
 
-First, let's swith your shell from ephemeral mode.
+First, let's switch your shell from ephemeral mode.
 
-Click <walkthrough-spotlight-pointer locator="semantic({button 'more_vert'})">More Menu</walkthrough-spotlight-pointer>
+Click <walkthrough-spotlight-pointer locator="semantic({button 'More Cloud Shell Settings'})">More Menu</walkthrough-spotlight-pointer>
 
 ## Project setup
 
