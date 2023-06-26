@@ -12,7 +12,7 @@ In this walkthrough, you'll generate OAuth credentials in preparation for the de
 
 First, let's switch your shell from ephemeral mode.
 
-Click <walkthrough-spotlight-pointer spotlightId='<menu-terminal>'>**More Menu**</walkthrough-spotlight-pointer>
+Click <walkthrough-spotlight-pointer spotlightId="cloud-shell-more-button" target="cloudshell" title="Show me where">**More**</walkthrough-spotlight-pointer>
 
 ## Project setup
 
