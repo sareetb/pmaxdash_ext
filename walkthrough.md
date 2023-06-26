@@ -99,12 +99,13 @@ Enable the Google Ads API and the BigQuery API so that they're incorporated in t
 
 ## Generate Refresh Token
 
-Go to the [OAuth2 Playground](https://developers.google.com/oauthplayground/#step1&scopes=https%3A//www.googleapis.com/auth/adwords&url=https%3A//&content_type=application/json&http_method=GET&useDefaultOauthCred=checked&oauthEndpointSelect=Google&oauthAuthEndpointValue=https%3A//accounts.google.com/o/oauth2/v2/auth&oauthTokenEndpointValue=https%3A//oauth2.googleapis.com/token&includeCredentials=unchecked&accessTokenType=bearer&autoRefreshToken=unchecked&accessType=offline&forceAprovalPrompt=checked&response_type=code) and follow the instructions in the implementation guide to generate your refresh token
+1. Go to the [OAuth2 Playground](https://developers.google.com/oauthplayground/#step1&scopes=https%3A//www.googleapis.com/auth/adwords&url=https%3A//&content_type=application/json&http_method=GET&useDefaultOauthCred=checked&oauthEndpointSelect=Google&oauthAuthEndpointValue=https%3A//accounts.google.com/o/oauth2/v2/auth&oauthTokenEndpointValue=https%3A//oauth2.googleapis.com/token&includeCredentials=unchecked&accessTokenType=bearer&autoRefreshToken=unchecked&accessType=offline&forceAprovalPrompt=checked&response_type=code)
+2. On the right-hand pane, paste the client_id and client_secret in the appropriate fields ![paste credentials](https://github.com/sareetb/pmaxdash_ext/blob/main/pplayground_fields.png)
 
 ## Change directory
 
 Edit yaml?
-<walkthrough-editor-select-line filePath="google-ads.yaml"
+<walkthrough-editor-select-line filePath=")google-ads.yaml"
                                 startLine="11" startCharacterOffset="54"
                                 endLine="12" endCharacterOffset="15">
 google-ads.yaml
