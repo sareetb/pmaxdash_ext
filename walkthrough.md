@@ -103,6 +103,11 @@ Create the credentials that are needed for generating an refresh token.
     <walkthrough-spotlight-pointer cssSelector="[formcontrolname='typeControl']">**Name**</walkthrough-spotlight-pointer>
     for your OAuth client ID.
 
+1. Add <walkthrough-spotlight-pointer locator="semantic({group 'Authorized redirect URIs'} {button 'Add URI'})">Authorized redirect URI</walkthrough-spotlight-pointer>
+   ```
+      https://developers.google.com/oauthplayground
+   ```
+
 1.  Click **Create**. Your OAuth client ID and client secret are generated and
     displayed on the OAuth client window.
 
