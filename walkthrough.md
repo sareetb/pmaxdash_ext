@@ -117,7 +117,7 @@ After generating the id and secret keep the confirmation screen open and go to t
 4. Now, click the new blue button ![Exchange authorization code for tokens](https://services.google.com/fh/files/misc/exchange_authorization_code_for_token.png)
 5. Finally, in the middle of the screen you'll see your refresh token on the last line.  Copy it and save it for future reference.  ![refresh_token](https://services.google.com/fh/files/misc/refresh_token.png)
 
-## Initialise Google Ads API Report Fetcher 
+## Initialize Google Ads API Report Fetcher 
 
 Run the following command and follow the steps:
 ```bash
@@ -126,6 +126,8 @@ npm init gaarf-wf@latest -- --answers=answers.json
 
 
 ## Conclusion
+
+Congratulations. You've set up the pMax Best Practices Dashboard.
 
 <walkthrough-conclusion-trophy></walkthrough-conclusion-trophy>
 
