@@ -100,20 +100,12 @@ Enable the Google Ads API and the BigQuery API so that they're incorporated in t
 ## Generate Refresh Token
 
 1. Go to the [OAuth2 Playground](https://developers.google.com/oauthplayground/#step1&scopes=https%3A//www.googleapis.com/auth/adwords&url=https%3A//&content_type=application/json&http_method=GET&useDefaultOauthCred=checked&oauthEndpointSelect=Google&oauthAuthEndpointValue=https%3A//accounts.google.com/o/oauth2/v2/auth&oauthTokenEndpointValue=https%3A//oauth2.googleapis.com/token&includeCredentials=unchecked&accessTokenType=bearer&autoRefreshToken=unchecked&accessType=offline&forceAprovalPrompt=checked&response_type=code)
-2. On the right-hand pane, paste the client_id and client_secret in the appropriate fields ![paste credentials](https://github.com/sareetb/pmaxdash_ext/blob/main/pplayground_fields.png)
-3. Then on the left hand side of the screen, click the blue button ![Authorize APIs](https://github.com/sareetb/pmaxdash_ext/blob/main/authorize_apis.png)
-4. Now, click the new blue button ![Exchange authorization coe for tokens](https://github.com/sareetb/pmaxdash_ext/blob/main/exchange_authorization_code_for_token.png)
-5. Finally, in the middle of the screen you'll see your refresh token on the last line.  Copy it and save it for future reference.  ![refresh_token](https://github.com/sareetb/pmaxdash_ext/blob/main/refresh_token.png)
+2. On the right-hand pane, paste the client_id and client_secret in the appropriate fields ![paste credentials](https://services.google.com/fh/files/misc/pplayground_fields.png)
+3. Then on the left hand side of the screen, click the blue button ![Authorize APIs](https://services.google.com/fh/files/misc/authorize_apis.png)
+4. Now, click the new blue button ![Exchange authorization code for tokens](https://services.google.com/fh/files/misc/exchange_authorization_code_for_token.png)
+5. Finally, in the middle of the screen you'll see your refresh token on the last line.  Copy it and save it for future reference.  ![refresh_token](https://services.google.com/fh/files/misc/refresh_token.png)
 
 ## Change directory
-
-Edit yaml?
-<walkthrough-editor-select-line filePath=")google-ads.yaml"
-                                startLine="11" startCharacterOffset="54"
-                                endLine="12" endCharacterOffset="15">
-google-ads.yaml
-</walkthrough-editor-select-line>
-
 
 ```bash
 npm init gaarf-wf@latest -- --answers=answers.json
