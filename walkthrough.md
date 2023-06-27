@@ -13,21 +13,6 @@ In this walkthrough, you'll generate OAuth credentials in preparation for the de
 <walkthrough-tutorial-duration duration="45"></walkthrough-tutorial-duration>
 
 
-## Switch Off Ephemeral Mode
-
-First, let's switch your shell from ephemeral mode.
-
-Click <walkthrough-spotlight-pointer spotlightId="cloud-shell-more-button" target="cloudshell" title="Show me where">**More**</walkthrough-spotlight-pointer> and look for the `Ephemeral Mode` option. If it is turned on turn it off. This allows the dashboard code to persist across sessions.
-
-## Clone Repository
-
-Copy the following command into the shell and press enter:
-```bash
-cd
-git clone https://github.com/google/pmax_best_practices_dashboard.git
-cd pmax_best_practices_dashboard
-```
-
 ## Google Cloud Project Setup
 
 GCP organizes resources into projects. This allows you to
@@ -47,6 +32,23 @@ Enable the Google Ads API and the BigQuery API so that they're incorporated in t
 
 <walkthrough-enable-apis apis="bigquery.googleapis.com,googleads.googleapis.com">
 </walkthrough-enable-apis>
+
+
+## Switch Off Ephemeral Mode
+
+First, let's switch your shell from ephemeral mode.
+
+Click <walkthrough-spotlight-pointer spotlightId="cloud-shell-more-button" target="cloudshell" title="Show me where">**More**</walkthrough-spotlight-pointer> and look for the `Ephemeral Mode` option. If it is turned on turn it off. This allows the dashboard code to persist across sessions.
+
+## Clone Repository
+
+Copy the following command into the shell and press enter:
+```bash
+cd
+git clone https://github.com/google/pmax_best_practices_dashboard.git
+cd pmax_best_practices_dashboard
+```
+
 
 ## Configure OAuth Consent Screen
 
