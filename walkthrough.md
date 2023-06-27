@@ -134,6 +134,7 @@ After generating the id and secret keep the confirmation screen open and go to t
 ## Deploy Solution 
 
 Run the following command and follow the steps:
+
 Make sure to have your developer token and MCC ID on hand.
 
 ```bash
