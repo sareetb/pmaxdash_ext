@@ -22,7 +22,7 @@ Click <walkthrough-spotlight-pointer spotlightId="cloud-shell-more-button" targe
 ## Clone this Repository
 
 Copy the following command into the shell and press enter:
-```
+```bash
 cd
 git clone https://github.com/google/pmax_best_practices_dashboard.git
 cd pmax_best_practices_dashboard
