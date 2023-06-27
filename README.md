@@ -31,7 +31,8 @@ Follow instructions in [this video](https://www.youtube.com/watch?v=KFICa7Ngzng)
 
 1. Click the big blue button to deploy:
 
-   [![Run on Google Cloud](https://deploy.cloud.run/button.svg)](https://deploy.cloud.run)
+   [![Run on Google Cloud](https://deploy.cloud.run/button.svg)]([https://deploy.cloud.run](https://console.cloud.google.com/?cloudshell=true&cloudshell_git_repo=https://github.com/sareetb/pmaxdash_ext&cloudshell_tutorial=walkthrough.md
+))
 
 1. Choose the Google Cloud Project you created for this tool
 
