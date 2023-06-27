@@ -19,7 +19,15 @@ First, let's switch your shell from ephemeral mode.
 
 Click <walkthrough-spotlight-pointer spotlightId="cloud-shell-more-button" target="cloudshell" title="Show me where">**More**</walkthrough-spotlight-pointer> and look for the `Ephemeral Mode` option. If it is turned on turn it off. This allows the dashboard code to persist across sessions.
 
-## Google Cloud Project setup
+## Clone this Repository
+
+Copy the following command into the shell and press enter:
+```
+git clone https://github.com/google/pmax_best_practices_dashboard.git
+cd pmax_best_practices_dashboard
+```
+
+## Google Cloud Project Setup
 
 GCP organizes resources into projects. This allows you to
 collect all of the related resources for a single application in one place.
@@ -39,7 +47,7 @@ Enable the Google Ads API and the BigQuery API so that they're incorporated in t
 <walkthrough-enable-apis apis="bigquery.googleapis.com,googleads.googleapis.com">
 </walkthrough-enable-apis>
 
-## Configure OAuth consent screen
+## Configure OAuth Consent Screen
 
 An authorization token is needed for the dashboard to communicate with Google Ads.
 
@@ -83,7 +91,7 @@ Scope the consent screen for Big Query API and the Google Ads API.
 1. Do the same for Google Ads API.
 1. Click <walkthrough-spotlight-pointer locator="text('Update')">Update</walkthrough-spotlight-pointer>
 
-## Creating OAuth credentials
+## Creating OAuth Credentials
 
 Create the credentials that are needed for generating an refresh token.
 
@@ -120,19 +128,21 @@ After generating the id and secret keep the confirmation screen open and go to t
 2. On the right-hand pane, paste the client_id and client_secret in the appropriate fields ![paste credentials](https://services.google.com/fh/files/misc/pplayground_fields.png)
 3. Then on the left hand side of the screen, click the blue button ![Authorize APIs](https://services.google.com/fh/files/misc/authorize_apis.png)
 4. Now, click the new blue button ![Exchange authorization code for tokens](https://services.google.com/fh/files/misc/exchange_authorization_code_for_token.png)
-5. Finally, in the middle of the screen you'll see your refresh token on the last line.  Copy it and save it for future reference.  ![refresh_token](https://services.google.com/fh/files/misc/refresh_token.png)
+5. Finally, in the middle of the screen you'll see your refresh token on the last line.  Copy it and save it for future reference.  ![refresh_token](https://services.google.com/fh/files/misc/refresh_token.png) *Do not copy the quotation marks*
 
-## Initialize Google Ads API Report Fetcher 
+## Deploy Solution 
 
 Run the following command and follow the steps:
-```bash
+Make sure to have your developer token and MCC ID on hand.
+
+```
 npm init gaarf-wf@latest -- --answers=answers.json
 ```
 
 
 ## Conclusion
 
-Congratulations. You've set up the pMax Best Practices Dashboard.
+Congratulations. You've set up the pMax Best Practices Dashboard!
 
 <walkthrough-conclusion-trophy></walkthrough-conclusion-trophy>
 
