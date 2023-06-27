@@ -1,20 +1,25 @@
-# Generate Credentials to Access the Google Ads API
+# Deploying the pMax Best Practices Dashboard
+
+<walkthrough-metadata>
+  <meta name="title" content="Deploying the pMax Best Practices Dashboard" />
+  <meta name="description" content="A step by step guide on configuring cloud and deploying the dashboard." />
+</walkthrough-metadata>
 
 ## Introduction
 
 In this walkthrough, you'll generate OAuth credentials in preparation for the deployment of the pMax Best Practices Dashboard.
 
-<walkthrough-tutorial-difficulty difficulty="3"></walkthrough-tutorial-difficulty>
-<walkthrough-tutorial-duration duration="10"></walkthrough-tutorial-duration>
+<walkthrough-tutorial-difficulty difficulty="2"></walkthrough-tutorial-difficulty>
+<walkthrough-tutorial-duration duration="45"></walkthrough-tutorial-duration>
 
 
 ## Switch Off Ephemeral Mode
 
 First, let's switch your shell from ephemeral mode.
 
-Click <walkthrough-spotlight-pointer spotlightId="cloud-shell-more-button" target="cloudshell" title="Show me where">**More**</walkthrough-spotlight-pointer>
+Click <walkthrough-spotlight-pointer spotlightId="cloud-shell-more-button" target="cloudshell" title="Show me where">**More**</walkthrough-spotlight-pointer> and look for the `Ephemeral Mode` option. If it is turned on turn it off. This allows the dashboard code to persist across sessions.
 
-## Project setup
+## Google Cloud Project setup
 
 GCP organizes resources into projects. This allows you to
 collect all of the related resources for a single application in one place.
@@ -27,7 +32,16 @@ dashboard.
 For details, see
 [Creating a project](https://cloud.google.com/resource-manager/docs/creating-managing-projects#creating_a_project).
 
+### Enable Google Cloud APIs
+
+Enable the Google Ads API and the BigQuery API so that they're incorporated in the credentials you will generate in the next step.
+
+<walkthrough-enable-apis apis="bigquery.googleapis.com,googleads.googleapis.com">
+</walkthrough-enable-apis>
+
 ## Configure OAuth consent screen
+
+An authorization token is needed for the dashboard to communicate with Google Ads.
 
 1.  Go to the **APIs & Services > OAuth consent screen** page in the Cloud
     Console. You can use the button below to find the section.
@@ -62,20 +76,16 @@ Click
 
 ## Add Sensitive Scopes to Consent Screen
 
+Scope the consent screen for Big Query API and the Google Ads API.
+
 1. Click <walkthrough-spotlight-pointer locator="semantic({button 'Add or remove scopes'})">Add or remove scopes</walkthrough-spotlight-pointer>
 1. Now in <walkthrough-spotlight-pointer locator="semantic({combobox 'Filter'})">Enter property name or value</walkthrough-spotlight-pointer> search for the BigQuery API, check the box to choose it.
 1. Do the same for Google Ads API.
 1. Click <walkthrough-spotlight-pointer locator="text('Update')">Update</walkthrough-spotlight-pointer>
 
-
-## Enable Google Cloud APIs
-
-Enable the Google Ads API and the BigQuery API so that they're incorporated in the credentials you will generate in the next step.
-
-<walkthrough-enable-apis apis="bigquery.googleapis.com,googleads.googleapis.com">
-</walkthrough-enable-apis>
-
 ## Creating OAuth credentials
+
+Create the credentials that are needed for generating an refresh token.
 
 1.  On the APIs & Services page, click the
     <walkthrough-spotlight-pointer cssSelector="#cfctest-section-nav-item-metropolis_api_credentials">**Credentials**</walkthrough-spotlight-pointer>
@@ -93,34 +103,36 @@ Enable the Google Ads API and the BigQuery API so that they're incorporated in t
     <walkthrough-spotlight-pointer cssSelector="[formcontrolname='typeControl']">**Name**</walkthrough-spotlight-pointer>
     for your OAuth client ID.
 
+1. Add <walkthrough-spotlight-pointer locator="semantic({group 'Authorized redirect URIs'} {button 'Add URI'})">Authorized redirect URI</walkthrough-spotlight-pointer>
+   ```
+      https://developers.google.com/oauthplayground
+   ```
+
 1.  Click **Create**. Your OAuth client ID and client secret are generated and
-    displayed on the OAuth client window. Do not close the screen yet.    
+    displayed on the OAuth client window.
+
+After generating the id and secret keep the confirmation screen open and go to the next step.
 
 
 ## Generate Refresh Token
 
-1. Go to the [OAuth2 Playground](https://developers.google.com/oauthplayground/#step1&scopes=https%3A//www.googleapis.com/auth/adwords&url=https%3A//&content_type=application/json&http_method=GET&useDefaultOauthCred=checked&oauthEndpointSelect=Google&oauthAuthEndpointValue=https%3A//accounts.google.com/o/oauth2/v2/auth&oauthTokenEndpointValue=https%3A//oauth2.googleapis.com/token&includeCredentials=unchecked&accessTokenType=bearer&autoRefreshToken=unchecked&accessType=offline&forceAprovalPrompt=checked&response_type=code)
-2. On the right-hand pane, paste the client_id and client_secret in the appropriate fields ![paste credentials](https://github.com/sareetb/pmaxdash_ext/blob/main/pplayground_fields.png)
-3. Then on the left hand side of the screen, click the blue button ![Authorize APIs](https://github.com/sareetb/pmaxdash_ext/blob/main/authorize_apis.png)
-4. Now, click the new blue button ![Exchange authorization coe for tokens](https://github.com/sareetb/pmaxdash_ext/blob/main/exchange_authorization_code_for_token.png)
-5. Finally, in the middle of the screen you'll see your refresh token on the last line.  Copy it and save it for future reference.  ![refresh_token](https://github.com/sareetb/pmaxdash_ext/blob/main/refresh_token.png)
+1. Go to the [OAuth2 Playground](https://developers.google.com/oauthplayground/#step1&scopes=https%3A//www.googleapis.com/auth/adwords&url=https%3A//&content_type=application/json&http_method=GET&useDefaultOauthCred=checked&oauthEndpointSelect=Google&oauthAuthEndpointValue=https%3A//accounts.google.com/o/oauth2/v2/auth&oauthTokenEndpointValue=https%3A//oauth2.googleapis.com/token&includeCredentials=unchecked&accessTokenType=bearer&autoRefreshToken=unchecked&accessType=offline&forceAprovalPrompt=checked&response_type=code) (opens in a new window)
+2. On the right-hand pane, paste the client_id and client_secret in the appropriate fields ![paste credentials](https://services.google.com/fh/files/misc/pplayground_fields.png)
+3. Then on the left hand side of the screen, click the blue button ![Authorize APIs](https://services.google.com/fh/files/misc/authorize_apis.png)
+4. Now, click the new blue button ![Exchange authorization code for tokens](https://services.google.com/fh/files/misc/exchange_authorization_code_for_token.png)
+5. Finally, in the middle of the screen you'll see your refresh token on the last line.  Copy it and save it for future reference.  ![refresh_token](https://services.google.com/fh/files/misc/refresh_token.png)
 
-## Change directory
+## Initialize Google Ads API Report Fetcher 
 
-Edit yaml?
-<walkthrough-editor-select-line filePath=")google-ads.yaml"
-                                startLine="11" startCharacterOffset="54"
-                                endLine="12" endCharacterOffset="15">
-google-ads.yaml
-</walkthrough-editor-select-line>
-
-
+Run the following command and follow the steps:
 ```bash
 npm init gaarf-wf@latest -- --answers=answers.json
 ```
 
 
 ## Conclusion
+
+Congratulations. You've set up the pMax Best Practices Dashboard.
 
 <walkthrough-conclusion-trophy></walkthrough-conclusion-trophy>
 
