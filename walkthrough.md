@@ -19,7 +19,7 @@ First, let's switch your shell from ephemeral mode.
 
 Click <walkthrough-spotlight-pointer spotlightId="cloud-shell-more-button" target="cloudshell" title="Show me where">**More**</walkthrough-spotlight-pointer> and look for the `Ephemeral Mode` option. If it is turned on turn it off. This allows the dashboard code to persist across sessions.
 
-## Clone this Repository
+## Clone Repository
 
 Copy the following command into the shell and press enter:
 ```bash
@@ -95,6 +95,8 @@ Scope the consent screen for Big Query API and the Google Ads API.
 ## Creating OAuth Credentials
 
 Create the credentials that are needed for generating an refresh token.
+
+Make sure to copy the credentials you create, you will need them later.
 
 1.  On the APIs & Services page, click the
     <walkthrough-spotlight-pointer cssSelector="#cfctest-section-nav-item-metropolis_api_credentials">**Credentials**</walkthrough-spotlight-pointer>
