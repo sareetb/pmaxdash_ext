@@ -14,6 +14,12 @@ The pMax Dashboard is a DataStudio dashboard providing an overview of your accou
 
 ## Deployment
 
+### Prerequisites
+
+* Developer token
+* New GCP with Big Query
+* Ask your gPS POC to add you to the relevant [permissions group](https://groups.google.com/a/professional-services.goog/g/solutions_pmax_dashboard-readers/)
+
 ## Setup
 
 Click the big blue button and follow the instructions:
@@ -21,10 +27,6 @@ Click the big blue button and follow the instructions:
    [![Run on Google Cloud](https://deploy.cloud.run/button.svg)](https://console.cloud.google.com/?cloudshell=true&cloudshell_git_repo=https://github.com/sareetb/pmaxdash_ext&cloudshell_tutorial=walkthrough.md
 )
 
-### Prerequisites
-
-* Developer token
-* New GCP with Big Query
 
 ### Installation
 
