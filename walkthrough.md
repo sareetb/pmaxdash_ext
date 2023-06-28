@@ -118,7 +118,7 @@ Make sure to copy the credentials you create, you will need them later.
 
 1. Add <walkthrough-spotlight-pointer locator="semantic({group 'Authorized redirect URIs'} {button 'Add URI'})">Authorized redirect URI</walkthrough-spotlight-pointer>
    ```
-      https://developers.google.com/oauthplayground
+   https://developers.google.com/oauthplayground
    ```
 
 1.  Click **Create**. Your OAuth client ID and client secret are generated and
