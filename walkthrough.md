@@ -40,13 +40,14 @@ First, let's switch your shell from ephemeral mode.
 
 Click <walkthrough-spotlight-pointer spotlightId="cloud-shell-more-button" target="cloudshell" title="Show me where">**More**</walkthrough-spotlight-pointer> and look for the `Ephemeral Mode` option. If it is turned on turn it off. This allows the dashboard code to persist across sessions.
 
-## Clone Repository
+## Clone Repository and Authorize
 
 Copy the following command into the shell and press enter:
 ```bash
 cd
 git clone https://github.com/google/pmax_best_practices_dashboard.git
 cd pmax_best_practices_dashboard
+gcloud auth login
 ```
 
 
