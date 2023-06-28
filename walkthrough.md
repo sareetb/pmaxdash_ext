@@ -42,7 +42,7 @@ Click <walkthrough-spotlight-pointer spotlightId="cloud-shell-more-button" targe
 
 ## Clone Repository and Authorize
 
-Copy the following command into the shell and press enter:
+Copy the following command into the shell, press enter and follow the instructions:
 ```bash
 cd
 git clone https://github.com/google/pmax_best_practices_dashboard.git
@@ -99,7 +99,7 @@ Scope the consent screen for Big Query API and the Google Ads API.
 
 Create the credentials that are needed for generating a refresh token.
 
-Make sure to **copy the credentials you create**, you will need them later.
+Make sure to **copy each of the credentials you create**, you will need them later.
 
 1.  On the APIs & Services page, click the
     <walkthrough-spotlight-pointer cssSelector="#cfctest-section-nav-item-metropolis_api_credentials">**Credentials**</walkthrough-spotlight-pointer>
@@ -126,22 +126,22 @@ Make sure to **copy the credentials you create**, you will need them later.
 1.  Click **Create**. Your OAuth client ID and client secret are generated and
     displayed on the OAuth client window.
 
-After generating the id and secret keep the confirmation screen open and go to the next step.
+After generating the client_id and client_secret keep the confirmation screen open and go to the next step.
 
 
 ## Generate Refresh Token
 
 1. Go to the [OAuth2 Playground](https://developers.google.com/oauthplayground/#step1&scopes=https%3A//www.googleapis.com/auth/adwords&url=https%3A//&content_type=application/json&http_method=GET&useDefaultOauthCred=checked&oauthEndpointSelect=Google&oauthAuthEndpointValue=https%3A//accounts.google.com/o/oauth2/v2/auth&oauthTokenEndpointValue=https%3A//oauth2.googleapis.com/token&includeCredentials=unchecked&accessTokenType=bearer&autoRefreshToken=unchecked&accessType=offline&forceAprovalPrompt=checked&response_type=code) (opens in a new window)
 2. On the right-hand pane, paste the client_id and client_secret in the appropriate fields ![paste credentials](https://services.google.com/fh/files/misc/pplayground_fields.png)
-3. Then on the left hand side of the screen, click the blue button ![Authorize APIs](https://services.google.com/fh/files/misc/authorize_apis.png)
-4. Now, click the new blue button ![Exchange authorization code for tokens](https://services.google.com/fh/files/misc/exchange_authorization_code_for_token.png)
+3. Then on the left hand side of the screen, click the blue **Authorize APIs** button ![Authorize APIs](https://services.google.com/fh/files/misc/authorize_apis.png)
+4. Now, click the new blue button **Exchange authorization code for tokens** ![Exchange authorization code for tokens](https://services.google.com/fh/files/misc/exchange_authorization_code_for_token.png)
 5. Finally, in the middle of the screen you'll see your refresh token on the last line.  Copy it and save it for future reference.  ![refresh_token](https://services.google.com/fh/files/misc/refresh_token.png) *Do not copy the quotation marks*
 
 ## Deploy Solution 
 
 Run the following command and follow the steps:
 
-Make sure to have your developer token and MCC ID on hand, in addition to the rest of the credentials generated .
+Make sure to have your developer token and MCC ID on hand, in addition to the rest of the credentials generated in the previous steps.
 
 When prompted, choose N to enter credentials one by one.
 
