@@ -99,7 +99,7 @@ Scope the consent screen for Big Query API and the Google Ads API.
 
 Create the credentials that are needed for generating a refresh token.
 
-Make sure to copy the credentials you create, you will need them later.
+Make sure to **copy the credentials you create**, you will need them later.
 
 1.  On the APIs & Services page, click the
     <walkthrough-spotlight-pointer cssSelector="#cfctest-section-nav-item-metropolis_api_credentials">**Credentials**</walkthrough-spotlight-pointer>
@@ -141,7 +141,9 @@ After generating the id and secret keep the confirmation screen open and go to t
 
 Run the following command and follow the steps:
 
-Make sure to have your developer token and MCC ID on hand.
+Make sure to have your developer token and MCC ID on hand, in addition to the rest of the credentials generated .
+
+When prompted, choose N to enter credentials one by one.
 
 ```bash
 npm init gaarf-wf@latest -- --answers=answers.json
