@@ -90,13 +90,13 @@ Click
 Scope the consent screen for Big Query API and the Google Ads API.
 
 1. Click <walkthrough-spotlight-pointer locator="semantic({button 'Add or remove scopes'})">Add or remove scopes</walkthrough-spotlight-pointer>
-1. Now in <walkthrough-spotlight-pointer locator="semantic({combobox 'Filter'})">Enter property name or value</walkthrough-spotlight-pointer> search for the BigQuery API, check the box to choose it.
+1. Now in <walkthrough-spotlight-pointer locator="semantic({combobox 'Filter'})">Enter property name or value</walkthrough-spotlight-pointer> search for the BigQuery API, check the box for the first option to choose it.
 1. Do the same for Google Ads API.
 1. Click <walkthrough-spotlight-pointer locator="text('Update')">Update</walkthrough-spotlight-pointer>
 
 ## Creating OAuth Credentials
 
-Create the credentials that are needed for generating an refresh token.
+Create the credentials that are needed for generating a refresh token.
 
 Make sure to copy the credentials you create, you will need them later.
 
@@ -113,10 +113,11 @@ Make sure to copy the credentials you create, you will need them later.
     type**</walkthrough-spotlight-pointer>, select **Web application**.
 
 1.  Add a
-    <walkthrough-spotlight-pointer cssSelector="[formcontrolname='typeControl']">**Name**</walkthrough-spotlight-pointer>
+    <walkthrough-spotlight-pointer cssSelector="[formcontrolname='displayName']">**Name**</walkthrough-spotlight-pointer>
     for your OAuth client ID.
 
-1. Add <walkthrough-spotlight-pointer locator="semantic({group 'Authorized redirect URIs'} {button 'Add URI'})">Authorized redirect URI</walkthrough-spotlight-pointer>
+1. Click <walkthrough-spotlight-pointer locator="semantic({group 'Authorized redirect URIs'} {button 'Add URI'})">Authorized redirect URI</walkthrough-spotlight-pointer>
+   and copy the following:
    ```
    https://developers.google.com/oauthplayground
    ```
